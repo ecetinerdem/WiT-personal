@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
-import Content from './components/Content'; // Import the Content component
+import Content from './components/Content'; 
+import { useLocalStorage } from './hooks/useLocalStorage';
+
 
 function App() {
   const [themeMode, setThemeMode] = useState('light');
+  const [darkMode, setDarkMode] = useLocalStorage('darkMode', false);
 
   const lightTheme = () => setThemeMode('light');
   const darkTheme = () => setThemeMode('dark');
@@ -15,11 +18,13 @@ function App() {
   }, [themeMode]);
 
   return (
+    <div className={darkMode ? 'dark' : 'light'}>
     <ThemeProvider value={{ themeMode, lightTheme, darkTheme }}>
       <LanguageProvider>
-        <Content />
+        <Content darkMode={darkMode} setDarkMode={setDarkMode}/>
       </LanguageProvider>
     </ThemeProvider>
+    </div>
   );
 }
 

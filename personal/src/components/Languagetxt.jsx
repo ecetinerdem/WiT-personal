@@ -12,11 +12,11 @@ function Languagetxt() {
       >
         {language === 'en' ? (
           <>
-            <span className="text-[#3730A3]">TÜRKÇE</span>'YE GEÇ
+            <span className="text-[#B7AAFF]">TÜRKÇE</span>'YE GEÇ
           </>
         ) : (
           <>
-            SWITCH TO <span className="text-[#3730A3]">ENGLISH</span>
+            SWITCH TO <span className="text-[#B7AAFF]">ENGLISH</span>
           </>
         )}
       </button>
