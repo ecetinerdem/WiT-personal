@@ -4,6 +4,17 @@ import cetinImage from '../assets/cetin.jpg';
 
 function Summary() {
     const { translations } = useContext(LanguageContext);
+
+    
+    const openGitHub = () => {
+        window.open('https://github.com/ecetinerdem', '_blank');
+    };
+
+    
+    const openLinkedIn = () => {
+        window.open('https://www.linkedin.com/in/engin-cetin-erdem/', '_blank');
+    };
+
     return (
         <div className="mt-16 px-4 sm:px-8 md:px-16 lg:px-24 py-12 bg-white dark:bg-gray-900 transition-colors duration-300">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
@@ -20,11 +31,17 @@ function Summary() {
                         <button className="mb-2 border-2 border-[#3730A3] text-[#3730A3] dark:border-[#B7AAFF] dark:text-[#B7AAFF] px-4 md:px-6 py-2 rounded-md hover:bg-[#3730A3] hover:text-white dark:hover:bg-[#E1E1FF] dark:hover:text-gray-900 transition">
                             {translations.hireMe}
                         </button>
-                        <button className="mb-2 border-2 border-[#3730A3] text-[#3730A3] dark:border-[#B7AAFF] dark:text-[#B7AAFF] px-4 md:px-6 py-2 rounded-md hover:bg-[#3730A3] hover:text-white dark:hover:bg-[#E1E1FF] dark:hover:text-gray-900 transition">
+                        <button 
+                            className="mb-2 border-2 border-[#3730A3] text-[#3730A3] dark:border-[#B7AAFF] dark:text-[#B7AAFF] px-4 md:px-6 py-2 rounded-md hover:bg-[#3730A3] hover:text-white dark:hover:bg-[#E1E1FF] dark:hover:text-gray-900 transition"
+                            onClick={openGitHub} 
+                        >
                             <i className="fa-brands fa-github mr-2"></i>Github
                         </button>
-                        <button className="mb-2 border-2 border-[#3730A3] text-[#3730A3] dark:border-[#B7AAFF] dark:text-[#B7AAFF] px-4 md:px-6 py-2 rounded-md hover:bg-[#3730A3] hover:text-white dark:hover:bg-[#E1E1FF] dark:hover:text-gray-900 transition">
-                        <i className="fa-brands fa-linkedin-in mr-2"></i>Linkedin
+                        <button 
+                            className="mb-2 border-2 border-[#3730A3] text-[#3730A3] dark:border-[#B7AAFF] dark:text-[#B7AAFF] px-4 md:px-6 py-2 rounded-md hover:bg-[#3730A3] hover:text-white dark:hover:bg-[#E1E1FF] dark:hover:text-gray-900 transition"
+                            onClick={openLinkedIn} 
+                        >
+                            <i className="fa-brands fa-linkedin-in mr-2"></i>Linkedin
                         </button>   
                     </div>
                 </div>
@@ -40,4 +57,4 @@ function Summary() {
     )
 }
 
-export default Summary
+export default Summary;
