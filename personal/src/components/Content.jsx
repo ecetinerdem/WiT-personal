@@ -4,10 +4,12 @@ import ThemeBtn from './ThemeBtn';
 import Languagetxt from './Languagetxt';
 import Avatar from './Avatar';
 import Summary from './Summary';
+import Skills from './Skills';
+import Seperator from './Seperator';
 
 function Content(props) {
   const { translations } = useContext(LanguageContext);
-  const {darkMode, setDarkMode} = props
+  const {darkMode, setDarkMode} = props;
 
   return (
     <div className="min-h-screen p-4 bg-white dark:bg-gray-900 transition-colors duration-300">
@@ -22,11 +24,10 @@ function Content(props) {
         {/* Avatar and Info Section */}
         <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto">
           <div className="flex items-center mb-6 md:mb-0">
-            {/* Avatar Component */}
+            
             <Avatar />
           </div>
 
-          {/* Skills, Projects, and Hire Me Section */}
           <div className="flex flex-wrap justify-center md:justify-end space-x-6 md:space-x-10 lg:space-x-14">
             <p className="text-[#6B7280] dark:text-[#6B7280] mb-2 md:mb-0 translate-y-[7px]">{translations.skills}</p>
             <p className="text-[#6B7280] dark:text-[#6B7280] mb-2 md:mb-0 translate-y-[7px]">{translations.projects}</p>
@@ -38,6 +39,11 @@ function Content(props) {
       </div>
       {/* Summary Component */}
       <Summary />
+      {/* Skills Component */}
+      <Skills />
+      {/* Seperator Component */}
+      <Seperator />
+      
     </div>
   );
 }
