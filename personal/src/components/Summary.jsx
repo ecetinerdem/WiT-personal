@@ -16,7 +16,7 @@ function Summary() {
     };
 
     return (
-        <div className="mt-16 px-4 sm:px-8 md:px-16 lg:px-24 py-12 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div className="mt-16 px-4 sm:px-8 md:px-16 lg:px-24 py-12 bg-white dark:bg-[#383838] transition-colors duration-300">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
                 <div className="md:w-3/5 pr-0 md:pr-8">
                     <h3 className="text-lg font-inter text-[#3730A3] dark:text-[#B7AAFF] mb-2">Cetin Erdem</h3>

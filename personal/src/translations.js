@@ -17,6 +17,13 @@ export const translations = {
     aboutMe: "About me",
     aboutTxt: "I am an aspiring full-stack developer with a growth mindset to acquire new skills and continuously develop myself with new challenges. I have worked as a customer support specialist for over 8 years.",
     aboutTxtTwo: "And now I decided to fulfill my childhood dream to become a software developer and improve myself in front end, back end and CS by completing a 6 month intensive Workintech full-stack development program.",
+    projectDescriptionOne: "A previously made movie application has now started to give problems while updating. It has become very difficult to manage. The scope of the project is also becoming more and more complex. Therefore, redux and axios will be added to this project's state management.",
+    projectDescriptionTwo: "The last 2 reducer and redux conversion projects you made were appreciated. That's why they gave you another project. Your new project is a movie application that displays the movies in the datajs file in order and can add the displayed movie to the watch list or remove the added one when desired.",
+    projectDescriptionThree: "In this challenge ı developed an application for a WIDGET. Examine its functionality and also examine the Console, Network tab and Elements tab in Chrome Developer Tools. There are two versions of the widget with the same functionality. The origin of the coordinates is in the top left corner of the Grid.",
+    viewSite: "View Site",
+    footerTxtOne: "Let's work together on",
+    footerTxtTwo: "your next product.",
+    personalBlog: "Personal Blog",
   },
   tr: {
     skills: "Yetenekler",
@@ -35,7 +42,14 @@ export const translations = {
     preferedRole: "Tercih Ettiği Rol",
     aboutMe: "Hakkımda",
     aboutTxt: "Ben, yeni beceriler edinmek ve kendini sürekli olarak yeni bilgiler ile geliştirmek isteyen, ilerleme odaklı bir full-stack geliştiriciyim. 8 yıldan uzun bir süre müşteri destek uzmanı olarak çalıştım.",
-    aboutTxtTwo:"Şimdi ise çocukluk hayalim olan yazılım geliştiricisi olmayı ve kendimi front-end, back-end, ve bilgisayar bilimlerinde geliştirmek için 6 aylık yoğun bir Workintech full-stack geliştirme programını tamamlamaya karar verdim."
+    aboutTxtTwo: "Şimdi ise çocukluk hayalim olan yazılım geliştiricisi olmayı ve kendimi front-end, back-end, ve bilgisayar bilimlerinde geliştirmek için 6 aylık yoğun bir Workintech full-stack geliştirme programını tamamlamaya karar verdim.",
+    projectDescriptionOne: "Daha önce yapılmış bir film uygulaması artık güncellenirken sorunlar çıkarmaya başladı. Yönetilmesi çok zor oldu. Projenin kapsamı da gittikçe karmaşıklaşıyor. Bu yüzden bu projeye  redux ve axios  bu projenint state yönetimine eklenecek ve proje geliştirilecek.",
+    projectDescriptionTwo: "Geçen yaptığın 2 reducer ve redux dönüşüm projeleri beğenildi. Bu yüzden sana bir proje daha verdiler. Yeni projen, datajs dosyasında yer alan filmleri sırayla görüntüleyen ve istendiğinde görüntülenen filmi izleme listesine ekleyebilen, ekleneni çıkarabilen bir film uygulaması.",
+    projectDescriptionThree: "Bu challengeda bir WIDGET için uygulama geliştirdim. İşlevini inceleyin ve ayrıca Chrome Geliştirici Araçları'nda Konsolu, Ağ sekmesini ve Öğeler sekmesini inceleyin. Widget'ın aynı işlevselliğe sahip iki sürümü vardır. Koordinatların orijini Gridin sol üst köşesindedir.",
+    viewSite: "Sayfayı görüntüle",
+    footerTxtOne: "Birsonraki uygulamanızda",
+    footerTxtTwo: "beraber çalışalım.",
+    personalBlog: "Kişisel Blog",
   }
 };
 
