@@ -7,6 +7,7 @@ import Summary from './Summary';
 import Skills from './Skills';
 import Seperator from './Seperator';
 import Profile from './Profile';
+import Projects from './Projects';
 
 function Content(props) {
   const { translations } = useContext(LanguageContext);
@@ -48,6 +49,8 @@ function Content(props) {
       <Profile />
       {/* Seperator Component */}
       <Seperator />
+      {/* Projects Component */}
+      <Projects />
 
     </div>
   );

@@ -13,7 +13,7 @@ function Skills() {
         <div className="py-12 bg-white dark:bg-gray-900 text-gray-300 transition-colors duration-300">
             
             <h3 className="text-4xl font-bold text-left mb-8 pl-40 text-[#1F2937] dark:text-[#6B7280]">
-                Skills
+                {translations.skills}
             </h3>
             
             <div className="flex justify-center gap-x-24">

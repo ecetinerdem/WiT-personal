@@ -21,12 +21,11 @@ function Profile() {
   return (
     <div className='flex justify-around'>
       <div>
-        <h2 className="text-4xl font-bold text-left mb-8  text-[#1F2937] dark:text-[#6B7280]">Profile</h2>
+        <h2 className="text-4xl font-bold text-left mb-8  text-[#1F2937] dark:text-[#6B7280]">{translations.profile}</h2>
         <div>
-          <h3 className="text-2xl font-semibold text-[#3730A3] dark:text-indigo-300 mb-4">Profile</h3>
+          <h3 className="text-2xl font-semibold text-[#3730A3] dark:text-indigo-300 mb-4">{translations.profile}</h3>
           <div className='flex '>
             <div className='w-32 '>
-                {/* Mapping profileFields */}
                 {Object.keys(profileFields).map((key) => (
                 <p key={key}>
                     <span className="font-bold text-[#1F2937] dark:text-white">
@@ -36,7 +35,6 @@ function Profile() {
                 ))}
             </div>
             <div className='w-60 '>
-                {/* Mapping profile */}
                 {Object.keys(profile).map((key) => (
                 <p key={key}>
                     <span className="text-[#1F2937] dark:text-white">{profile[key]}</span>
@@ -44,19 +42,14 @@ function Profile() {
                 ))}
             </div>
           </div>
-
         </div>
       </div>
-      <div className='mt-16'>
-        <h3 className="text-2xl font-semibold text-[#3730A3] dark:text-indigo-300 mb-4">About Me</h3>
-        <p className='flex-wrap text-sm text-[#6B7280] dark:text-white mb-4'>
-          I am an aspiring full-stack developer with a growth mindset to acquire <br />
-          new skills and continuously develop myself with new challenges.<br />
-          After working as a customer support specialist for over 8 years,<br />
-          <br />
-          I decided to fulfill my childhood dream to become a software developer<br />
-          and improve myself in front end, back end and CS by completing<br />
-          a 6-month intensive Workintech full-stack development program.
+      <div className='w-1/3 mt-16 flex-wrap  translate-x-[-60px]'> {/* Added -ml-20 here */}
+        <h3 className="text-2xl font-semibold text-[#3730A3] dark:text-indigo-300 mb-4">{translations.aboutMe}</h3>
+        <p className='text-sm text-[#6B7280] dark:text-white mb-4'>
+          {translations.aboutTxt}
+          <br /> <br />
+          {translations.aboutTxtTwo}
         </p>
       </div>
     </div>
