@@ -3,6 +3,8 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import Content from './components/Content'; 
 import { useLocalStorage } from './hooks/useLocalStorage';
+import { ToastContainer, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -18,12 +20,25 @@ function App() {
   }, [themeMode]);
 
   return (
-    <div className={darkMode ? 'dark' : 'light'}>
+    <div className={darkMode ? 'dark' : null}>
     <ThemeProvider value={{ themeMode, lightTheme, darkTheme }}>
       <LanguageProvider>
         <Content darkMode={darkMode} setDarkMode={setDarkMode}/>
       </LanguageProvider>
     </ThemeProvider>
+    <ToastContainer
+      position="top-right"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="dark"
+      transition={Bounce}
+      />
     </div>
   );
 }

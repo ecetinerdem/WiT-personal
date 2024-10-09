@@ -10,9 +10,9 @@ function Skills() {
     ];
 
     return (
-        <div className="py-12 bg-white dark:bg-[#383838] text-gray-300 transition-colors duration-300">
+        <div className="py-12 bg-white dark:bg-[#252128] text-gray-300 transition-colors duration-300">
             
-            <h3 className="text-4xl font-bold text-left mb-8 pl-40 text-[#1F2937] dark:text-[#6B7280]">
+            <h3 className="text-4xl font-bold text-left mb-8 pl-44 text-[#1F2937] dark:text-[#6B7280]">
                 {translations.skills}
             </h3>
             

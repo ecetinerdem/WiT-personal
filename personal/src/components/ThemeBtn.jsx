@@ -1,16 +1,27 @@
-import useTheme from '../contexts/ThemeContext';
+import  useTheme  from '../contexts/ThemeContext';
+import { useEffect } from 'react';
 
-function ThemeBtn() {
-    const {themeMode, lightTheme, darkTheme} = useTheme()
+function ThemeBtn({ darkMode, setDarkMode }) {
+    const { themeMode, lightTheme, darkTheme } = useTheme();
+
+    useEffect(() => {
+        
+        if (darkMode) {
+            darkTheme();
+        } else {
+            lightTheme();
+        }
+    }, []);
 
     const onChangeBtn = (e) => {
-        const darkModeStatus = e.currentTarget.checked
+        const darkModeStatus = e.currentTarget.checked;
+        setDarkMode(darkModeStatus);
         if (darkModeStatus) {
-            darkTheme()
+            darkTheme();
         } else {
-            lightTheme()
+            lightTheme();
         }
-    }
+    };
 
     return (
         <label className="relative inline-flex items-center cursor-pointer pt-[2px]">
@@ -37,4 +48,4 @@ function ThemeBtn() {
     );
 }
 
-export default ThemeBtn
+export default ThemeBtn;

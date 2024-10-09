@@ -1,22 +1,45 @@
 import React, { useContext } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
 import cetinImage from '../assets/cetin.jpg';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 function Summary() {
     const { translations } = useContext(LanguageContext);
 
     
     const openGitHub = () => {
+        toast.success('Opening GitHub...');
         window.open('https://github.com/ecetinerdem', '_blank');
     };
 
     
     const openLinkedIn = () => {
+        toast.success('Opening LinkedIn...');
         window.open('https://www.linkedin.com/in/engin-cetin-erdem/', '_blank');
     };
 
+  
+  const handleHireMeTwo = async () => {
+    // Open mailto link
+    window.location.href = "mailto:e.cetinerdem@gmail.com";
+
+    // Make POST request
+    try {
+      const response = await axios.post('https://reqres.in/api/workintech', {
+        message: 'Job Offer',
+        timestamp: new Date().toISOString()
+      });
+      toast.success('Send your email!');
+      console.log('Successful response:', response.data);
+    } catch (error) {
+        toast.error('Error sending message!');
+      console.error('Error:', error);
+    }
+  };
+
     return (
-        <div className="mt-16 px-4 sm:px-8 md:px-16 lg:px-24 py-12 bg-white dark:bg-[#383838] transition-colors duration-300">
+        <div className="mt-16 px-4 sm:px-8 md:px-16 lg:px-24 py-12 bg-white dark:bg-[#252128] transition-colors duration-300">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
                 <div className="md:w-3/5 pr-0 md:pr-8">
                     <h3 className="text-lg font-inter text-[#3730A3] dark:text-[#B7AAFF] mb-2">Cetin Erdem</h3>
@@ -28,7 +51,8 @@ function Summary() {
                         {translations.hero}
                     </p>
                     <div className="flex flex-wrap space-x-2 md:space-x-4">
-                        <button className="mb-2 border-2 border-[#3730A3] text-[#3730A3] dark:border-[#B7AAFF] dark:text-[#B7AAFF] px-4 md:px-6 py-2 rounded-md hover:bg-[#3730A3] hover:text-white dark:hover:bg-[#E1E1FF] dark:hover:text-gray-900 transition">
+                        <button className="mb-2 border-2 border-[#3730A3] text-[#3730A3] dark:border-[#B7AAFF] dark:text-[#B7AAFF] px-4 md:px-6 py-2 rounded-md hover:bg-[#3730A3] hover:text-white dark:hover:bg-[#E1E1FF] dark:hover:text-gray-900 transition"
+                        onClick={handleHireMeTwo}>
                             {translations.hireMe}
                         </button>
                         <button 
